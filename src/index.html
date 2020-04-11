@@ -7,14 +7,14 @@
     <meta name="msapplication-config" content="./favicons/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <meta name="title" content="Générateur d'attestation de déplacement dérogatoire - COVID-19">
-    <meta name="description" content="Ce service officiel génère une version numérique de l’attestation déplacement covid-19 à présenter aux forces de sécurité lors d’un contrôle.">
+    <meta name="description" content="Ce service non-officiel génère une version numérique de l’attestation déplacement covid-19 à présenter aux forces de sécurité lors d’un contrôle.">
     <meta name="keywords" content="covid19, covid-19, attestation, déplacement, officielle, gouvernement">
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="French">
     <meta property="og:title" content="Générateur d'attestation de déplacement dérogatoire - COVID-19" />
     <meta property="og:locale" content="fr_FR" />
-    <meta property="og:description" content="Ce service officiel génère une version numérique de l’attestation déplacement covid-19 à présenter aux forces de sécurité lors d’un contrôle." />
+    <meta property="og:description" content="Ce service non-officiel génère une version numérique de l’attestation déplacement covid-19 à présenter aux forces de sécurité lors d’un contrôle." />
     <link rel="canonical" href="https://media.interieur.gouv.fr/deplacement-covid-19/" />
     <meta property="og:url" content="https://media.interieur.gouv.fr/deplacement-covid-19/" />
     <meta property="og:site_name" content="Générateur d'attestation de déplacement dérogatoire - COVID-19" />
@@ -30,7 +30,7 @@
 </head>
 <body>
     <header role="banner" class="wrapper">
-        <img class="logo" src="/MIN_Interieur_RVB.svg" alt="Ministère de l'intérieur. Liberté, égalité, fraternité.">
+        <p class="alert alert-warning" id="non-official">Ceci est une version non officielle du générateur, rendez vous sur <a href="https://media.interieur.gouv.fr/deplacement-covid-19/">https://media.interieur.gouv.fr/deplacement-covid-19/</a> pour la version du gouvernement.</p>
         <div>
             <h1 class="flex flex-wrap">
                 <span class="covid-title">
@@ -42,7 +42,7 @@
             </h1>
             <p class="text-alert">
                 Les données saisies sont stockées exclusivement sur votre téléphone ou votre ordinateur. Aucune information n'est collectée par le Ministère de l'Intérieur.
-                L'attestation pdf générée contient un QR Code. Ce code-barres graphique permet de lire les informations portées dans votre attestation au moment de leur saisie. 
+                L'attestation pdf générée contient un QR Code. Ce code-barres graphique permet de lire les informations portées dans votre attestation au moment de leur saisie.
                 Il peut être déchiffré à l'aide de tout type de lecteur de QR code générique.
             </p>
         </div>
@@ -55,7 +55,7 @@
         <form id="form-profile" accept-charset="UTF-8">
             <h2 class="titre-2">Remplissez en ligne votre attestation numérique :</h2>
             <p class="text-alert">Tous les champs sont obligatoires.</p>
-            
+
             <div class="form-group">
                 <label for="field-firstname" id="field-firstname-label">Prénom</label>
                 <div class="input-group  align-items-center">
@@ -74,7 +74,7 @@
                 </div>
                 <p class="exemple"></p>
             </div>
-            
+
             <div class="form-group">
                 <label for="field-lastname" id="field-lastname-label">Nom</label>
                 <div class="input-group  align-items-center">
@@ -93,7 +93,7 @@
                 </div>
                 <p class="exemple"></p>
             </div>
-            
+
             <div class="form-group">
                 <label for="field-birthday" id="field-birthday-label">Date de naissance (au format jj/mm/aaaa)</label>
                 <div class="input-group  align-items-center">
@@ -114,7 +114,7 @@
                 </div>
                 <p class="exemple"></p>
             </div>
-            
+
             <div class="form-group">
                 <label for="field-lieunaissance"  id="field-lieunaissance-label">Lieu de naissance</label>
                 <div class="input-group  align-items-center">
@@ -131,7 +131,7 @@
                 </div>
                 <p class="exemple"></p>
             </div>
-            
+
             <div class="form-group">
                 <label for="field-address" id="field-address-label">Adresse</label>
                 <div class="input-group  align-items-center">
@@ -141,7 +141,7 @@
                         id="field-address"
                         name="address"
                         aria-invalid="true"
-                        autocomplete="address-line1" 
+                        autocomplete="address-line1"
                         placeholder="999 avenue de france"
                         required
                     >
@@ -149,7 +149,7 @@
                 </div>
                 <p class="exemple"></p>
             </div>
-            
+
             <div class="form-group">
                 <label for="field-town" id="field-town-label">Ville</label>
                 <div class="input-group  align-items-center">
@@ -167,7 +167,7 @@
                 </div>
                 <p class="exemple"></p>
             </div>
-            
+
             <div class="form-group">
                 <label for="field-zipcode" id="field-zipcode-label" >Code Postal</label>
                 <div class="input-group  align-items-center">
@@ -181,7 +181,7 @@
                         id="field-zipcode"
                         name="zipcode"
                         aria-invalid="true"
-                        autocomplete="postal-code" 
+                        autocomplete="postal-code"
                         minlength="4"
                         maxlength="5"
                         placeholder="75001"
@@ -191,29 +191,29 @@
                 </div>
                 <p class="exemple"></p>
             </div>
-            
+
             <fieldset>
                 <legend class="title-3">Choisissez le ou les motif(s) de sortie</legend>
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="field-reason" id="checkbox-travail" value="travail">
                     <label class="form-check-label" for="checkbox-travail">Déplacements entre le domicile et le lieu d’exercice de l’activité professionnelle, lorsqu'ils sont indispensables à l'exercice d’activités ne pouvant être organisées sous forme de télétravail ou déplacements professionnels ne pouvant être différés.</label>
                 </div>
-    
+
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="field-reason" id="checkbox-courses" value="courses">
                     <label class="form-check-label" for="checkbox-courses">Déplacements pour effectuer des achats de fournitures nécessaires à l’activité professionnelle et des achats de première nécessité dans des établissements dont les activités demeurent autorisées (<a href="https://www.service-public.fr/particuliers/actualites/A13921" class="stores-link" title="Liste des commerces et établissements qui restent ouverts - nouvelle page" target="_blank">liste des commerces et établissements qui restent ouverts</a>).</label>
                 </div>
-                
+
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="field-reason" id="checkbox-sante" value="sante">
                     <label class="form-check-label" for="checkbox-sante">Consultations et soins ne pouvant être assurés à distance et ne pouvant être différés ; consultations et soins des patients atteints d'une affection de longue durée.</label>
                 </div>
-                
+
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="field-reason" id="checkbox-famille" value="famille">
                     <label class="form-check-label" for="checkbox-famille">Déplacements pour motif familial impérieux, pour l’assistance aux personnes vulnérables ou la garde d’enfants.</label>
                 </div>
-                
+
                 <div class="form-check">
                     <input class="form-check-input" type="checkbox" name="field-reason" id="checkbox-sport" value="sport">
                     <label class="form-check-label" for="checkbox-sport">Déplacements brefs, dans la limite d'une heure quotidienne et dans un rayon maximal d'un kilomètre autour du domicile, liés soit à l'activité physique individuelle des personnes, à l'exclusion de toute pratique sportive collective et de toute proximité avec d'autres personnes, soit à la promenade avec les seules personnes regroupées dans un même domicile, soit aux besoins des animaux de compagnie.</label>
@@ -227,7 +227,7 @@
                     <label class="form-check-label" for="checkbox-missions">Participation à des missions d’intérêt général sur demande de l’autorité administrative.</label>
                 </div>
             </fieldset>
-            
+
             <div class="form-group">
                 <label for="field-datesortie">Date de sortie</label>
                 <div class="input-group  align-items-center">
@@ -235,7 +235,7 @@
                     <span class="validity" aria-hidden="true"></span>
                 </div>
             </div>
-            
+
             <div class="form-group">
                 <label for="field-heuresortie">Heure de sortie</label>
                 <div class="input-group  align-items-center">
@@ -243,8 +243,8 @@
                     <span class="validity" aria-hidden="true"></span>
                 </div>
             </div>
-            
-            
+
+
             <p class="text-center mt-5">
                 <button type="button" id="generate-btn" class="btn btn-primary btn-attestation"><span ><i class="fa fa-file-pdf inline-block mr-1"></i>  Générer mon attestation</span></button>
             </p>
@@ -260,7 +260,7 @@
         </p>
         <p class="label-mi">
             Ministère de l'Intérieur - DNUM - SDIT
-        </p> 
+        </p>
         <img class="center" src="/logo_dnum.svg" alt="logo dnum">
     </div>
     </main>
@@ -268,11 +268,11 @@
         <div class="footer-links">
             <a href="./confidentialite.html" title="Confidentialité - nouvelle page" target="_blank" class="footer-line footer-link">Confidentialité</a>
             <a href="https://www.interieur.gouv.fr/Infos-du-site/Mentions-legales" title="Mentions légales - nouvelle page" target="_blank" class="footer-line footer-link">Mentions légales</a>
-            <a href="https://www.gouvernement.fr/info-coronavirus" title="Information du gouvernement sur le Covid-19 - nouvelle page" target="_blank" class="footer-line footer-link">Informations du gouvernement sur le Covid-19</a> 
+            <a href="https://www.gouvernement.fr/info-coronavirus" title="Information du gouvernement sur le Covid-19 - nouvelle page" target="_blank" class="footer-line footer-link">Informations du gouvernement sur le Covid-19</a>
             <div class="footer-line" >Plus d’infos au <a class="num-08" href="tel:0800130000">0 800 130 000</a></div>
             <p class="footer-line" id="version"></p>
         </div>
-    </footer> 
+    </footer>
 
     <div class="alert  alert-info  d-none" id="update-alert">
         Une nouvelle version est disponible. Cliquer sur le bouton pour l'obtenir.

@@ -44,6 +44,13 @@ function setDateNow (date) {
 document.addEventListener('DOMContentLoaded', setReleaseDateTime)
 
 function setReleaseDateTime () {
+  const savedFields = getProfile()
+  for (const field of $$('#form-profile input')) {
+    if (savedFields[field.name]) {
+      field.value = savedFields[field.name];
+    }
+  }
+
   const loadedDate = new Date()
   setDateNow(loadedDate)
   const releaseDateInput = document.querySelector('#field-datesortie')
@@ -54,6 +61,7 @@ function setReleaseDateTime () {
 
   const releaseTimeInput = document.querySelector('#field-heuresortie')
   releaseTimeInput.value = `${hour}:${minute}`
+
 }
 
 function saveProfile () {
@@ -239,10 +247,10 @@ $('#generate-btn').addEventListener('click', async event => {
   saveProfile()
   const reasons = getAndSaveReasons()
   const pdfBlob = await generatePdf(getProfile(), reasons)
-  localStorage.clear()
+  // localStorage.clear()
   const creationDate = new Date().toLocaleDateString('fr-CA')
   const creationHour = new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' }).replace(':', '-')
-  downloadBlob(pdfBlob, `attestation-${creationDate}_${creationHour}.pdf`) 
+  downloadBlob(pdfBlob, `attestation-${creationDate}_${creationHour}.pdf`)
 
   snackbar.classList.remove('d-none')
   setTimeout(() => snackbar.classList.add('show'), 100)
